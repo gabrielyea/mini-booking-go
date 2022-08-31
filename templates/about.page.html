@@ -1,7 +1,7 @@
 {{template "base" .}}
 {{define "content"}}
     <h1>This is the about page</h1>
-    <p> This was injectesd {{index .StringMap "test"}}</p>
+    <p> This was injected {{index .StringMap "test"}}</p>
     <p>
         {{if ne (index .StringMap "remote_ip") ""}}
             Your remote ip address is {{ index .StringMap "remote_ip" }}
