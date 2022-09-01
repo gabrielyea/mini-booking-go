@@ -1,0 +1,12 @@
+{{template "base" .}}
+{{define "content"}}
+    <h1>This is the about page</h1>
+    <p> This was injected {{index .StringMap "test"}}</p>
+    <p>
+        {{if ne (index .StringMap "remote_ip") ""}}
+            Your remote ip address is {{ index .StringMap "remote_ip" }}
+        {{else}}
+            Unkown IP
+        {{end}}
+    </p>
+{{end}}
