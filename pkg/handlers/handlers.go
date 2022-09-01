@@ -44,3 +44,7 @@ func (re *Repository) About(w http.ResponseWriter, r *http.Request) {
 	sm["test"] = "Hello there about"
 	render.RenderTemplate(w, "about.page.html", &models.TemplateData{StringMap: sm})
 }
+
+func (re *Repository) Reservations(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "reservations.page.html", nil)
+}
